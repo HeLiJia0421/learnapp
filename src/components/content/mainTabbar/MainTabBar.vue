@@ -1,5 +1,5 @@
 <template>
-  <tab-bar>
+  <tab-bar class="tab-bar">
     <tab-bar-item path="/home" activeColor="Teal">
       <img slot="item-icon" src="~assets/img/tabbar/home.jpg" alt="">
       <img slot="item-icon-active" src="~assets/img/tabbar/dianji.jpg" alt="">
@@ -36,5 +36,7 @@ export default {
 </script>
 
 <style scoped>
-
+.tab-bar{
+  z-index: 9;
+}
 </style>

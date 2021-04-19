@@ -27,6 +27,7 @@ export default {
   methods:{
     itemClick(){
       this.$router.replace(this.path)
+
     }
   }
 }

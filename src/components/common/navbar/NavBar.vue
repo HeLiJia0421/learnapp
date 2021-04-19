@@ -1,15 +1,25 @@
 <template>
-  <div class="nav-bar">
+  <div class="nav-bar" @click="itemClick">
     <div class="left"><slot name="left"></slot></div>
-    <div class="center-1"><slot name="center-1"></slot></div>
-    <div class="center-2"><slot name="center-2"></slot></div>
+      <div class="center-1" ><slot name="center-1"></slot></div>
+    <div class="center-2" ><slot name="center-2"></slot></div>
     <div class="right"><slot name="right"></slot></div>
   </div>
 </template>
 
 <script>
 export default {
-name: "NavBar"
+name: "NavBar",
+  props:{
+    path:String,
+  },
+
+  methods:{
+    itemClick(){
+      this.$router.replace(this.path)
+
+    }
+  }
 }
 </script>
 
